@@ -1,7 +1,7 @@
 // src/services/api.ts
 import axios from "axios";
 
-const API_BASE = `https://cogni-backend-34q2.onrender.com/`;
+const API_BASE = `https://cogni-backend-34q2.onrender.com`;
 
 export const processContent = async (content: string) => {
   const formData = new FormData();

@@ -50,9 +50,10 @@ export default function App() {
         background: "linear-gradient(180deg, #f3e5f5 0%, #e1bee7 100%)",
         py: 8,
         px: 2,
+        placeContent: "center",
       }}
     >
-      <Container maxWidth="md">
+      <Container style={{ textAlign: "center", placeContent: "center",  }}>
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography
@@ -123,13 +124,13 @@ export default function App() {
 
         {/* Result Section */}
         {result && (
-          <Grid container spacing={4}>
-            <Box key="summary" sx={{ width: { xs: "100%", md: "50%" }, p: 1 }}>
+          <Grid container spacing={4} sx={{display:'grid', placeContent:'center', justifyContent:'center'}}       >
+            <Box key="summary" sx={{ width:'50vw', p: 1 }}>
               <SummaryCard summary={result.summary} />
             </Box>
 
             {result.quiz && (
-              <Box key="quiz" sx={{ width: { xs: "100%", md: "50%" }, p: 1 }}>
+              <Box key="quiz" sx={{ placeContent:'center',width:'50vw', alignItems:'center', alignSelf:'center' }}>
                 <QuizCard
                   mcq={result.quiz.mcq}
                   flashcards={result.quiz.flashcards}
